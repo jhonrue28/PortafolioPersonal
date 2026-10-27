@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#080B12">
+  <meta name="description" content="Portafolio de Jhonatan Rueda, desarrollador de software junior.">
+  <title>Jhonatan Rueda | Desarrollador de software</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="sitio-cabecera">
+    <a class="marca" href="#inicio">JDRG</a>
+    <nav aria-label="Secciones">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section id="inicio" class="seccion presentacion" aria-labelledby="titulo-inicio" data-grupo-revelar>
+      <div class="presentacion-texto">
+        <p class="seccion-indice" data-revelar>01</p>
+        <h1 id="titulo-inicio" data-revelar>Jhonatan David Rueda Galeano</h1>
+        <p class="presentacion-rol" data-revelar>Desarrollador de software junior</p>
+      </div>
+      <figure class="retrato" data-revelar>
+        <img src="assets/retrato.jpeg" alt="Retrato de Jhonatan Rueda">
+      </figure>
+    </section>
+
+    <section id="sobre-mi" class="seccion" aria-labelledby="titulo-sobre-mi" data-grupo-revelar>
+      <p class="seccion-indice" data-revelar>02</p>
+      <h2 id="titulo-sobre-mi" data-revelar>Sobre mí</h2>
+      <div class="narrativa" data-revelar>
+        <!-- Sustituye este párrafo por tu texto personal. No está escrito como biografía. -->
+        <p>Soy desarrollador de software junior, interesado en crear soluciones tecnológicas que respondan a necesidades reales. Me gusta aprender nuevas tecnologías, resolver problemas y convertir ideas en proyectos funcionales.
+
+Tengo experiencia académica y práctica trabajando con tecnologías como Java, Python, JavaScript, HTML, CSS y MySQL, además de herramientas como Git y n8n para el desarrollo y la automatización de procesos.
+
+Me caracterizo por ser una persona autodidacta, analítica y adaptable, con disposición para aprender, trabajar en equipo y asumir nuevos retos. Mi objetivo es seguir fortaleciendo mis habilidades y aportar al desarrollo de proyectos que generen valor.</p>
+      </div>
+    </section>
+
+    <section id="proyectos" class="seccion" aria-labelledby="titulo-proyectos" data-grupo-revelar>
+      <p class="seccion-indice" data-revelar>03</p>
+      <h2 id="titulo-proyectos" data-revelar>Proyectos</h2>
+      <div class="composicion">
+        <article class="proyecto" data-revelar>
+          <figure class="proyecto-figura">
+            <!-- Sustituir por una captura de la consola de CrediYa: <img src="assets/crediya.png" alt="Menú de consola de CrediYa"> -->
+            <div class="proyecto-pendiente">
+              <p>Captura pendiente</p>
+            </div>
+          </figure>
+          <div class="proyecto-cuerpo">
+            <h3>CrediYa</h3>
+            <p>Sistema de consola en Java para la operación de cartera de CrediYa S.A.S. Permite registrar empleados y clientes, asociar un préstamo a un cliente y a un empleado, anotar pagos y consultar préstamos activos, vencidos y clientes en mora.</p>
+            <h4>Qué aprendí</h4>
+            <p>Aprendí a separar el sistema en clases, servicios y repositorios, y a guardar la misma información en archivos o en MySQL mediante JDBC. También practiqué el cálculo de saldos y los reportes de préstamos activos, vencidos y clientes en mora.</p>
+            <a class="proyecto-enlace" href="https://github.com/jhonrue28/CrediYa_JhonatanRueda" rel="noopener noreferrer">Ver repositorio en GitHub</a>
+          </div>
+        </article>
+        <article class="proyecto" data-revelar>
+          <figure class="proyecto-figura">
+            <img src="assets/campuslands-ops.png" alt="Pantalla de bienvenida de Campuslands Ops, con el acceso a la aplicación.">
+          </figure>
+          <div class="proyecto-cuerpo">
+            <h3>Campuslands Ops</h3>
+            <p>Aplicación web de operaciones del campus Campuslands, desarrollada en equipo. Reúne el plano de las salas, las reservas con horario y capacidad, el inventario de computadores y periféricos, y el registro de incidentes, que la persona operadora confirma antes de guardar.</p>
+            <h4>Qué aprendí</h4>
+            <p>Al participar en este proyecto de equipo, practiqué cómo una interfaz web consulta una API y cómo el servidor valida las reservas, el inventario y los incidentes antes de guardarlos.</p>
+            <a class="proyecto-enlace" href="https://github.com/jhonrue28/campuslands-ops" rel="noopener noreferrer">Ver repositorio en GitHub</a>
+          </div>
+        </article>
+        <article class="proyecto" data-revelar>
+          <figure class="proyecto-figura">
+            <!-- Sustituir por una captura del menú de consola: <img src="assets/proyecto-python.png" alt="Menú de consola del proyecto Python"> -->
+            <div class="proyecto-pendiente">
+              <p>Captura pendiente</p>
+            </div>
+          </figure>
+          <div class="proyecto-cuerpo">
+            <h3>Proyecto Python</h3>
+            <p>Programa de consola en Python del repositorio de Jessica Urrego y Jhonatan Rueda. Ofrece menús de camper, trainer y coordinador para la inscripción, la consulta de ruta y notas, el seguimiento de campers y la administración de trainers, salones y rutas en archivos JSON.</p>
+            <h4>Qué aprendí</h4>
+            <p>Aprendí a construir menús de consola para cada perfil y a leer y actualizar listas y diccionarios de campers, trainers, salones y rutas en archivos JSON.</p>
+            <a class="proyecto-enlace" href="https://github.com/jhonrue28/Proyecto_Python_UrregoJessicaRuedaJhonatan" rel="noopener noreferrer">Ver repositorio en GitHub</a>
+          </div>
+        </article>
+        <article class="proyecto" data-revelar>
+          <figure class="proyecto-figura">
+            <img src="assets/portal-api-colombia.png" alt="Página de inicio de Portal API Colombia, titulada El Trono Criollo, con enlaces a Colombia, Presidentes y Departamentos.">
+          </figure>
+          <div class="proyecto-cuerpo">
+            <h3>Portal API Colombia</h3>
+            <p>Portal web informativo que consulta la API pública de API Colombia. Desde el inicio se puede ver información general del país, un listado de presidentes y el listado de departamentos.</p>
+            <h4>Qué aprendí</h4>
+            <p>Aprendí a pedir datos a la API con fetch, a ordenar y recorrer la respuesta, y a mostrar el país, los presidentes y los departamentos directamente en la página.</p>
+            <a class="proyecto-enlace" href="https://github.com/jhonrue28/portalApiColombia" rel="noopener noreferrer">Ver repositorio en GitHub</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="seccion" aria-labelledby="titulo-skills" data-grupo-revelar>
+      <p class="seccion-indice" data-revelar>04</p>
+      <h2 id="titulo-skills" data-revelar>Skills</h2>
+      <ul class="skills-rejilla">
+        <li data-revelar>
+          <button type="button" class="skill" aria-labelledby="nombre-python" aria-describedby="detalle-python">
+            <span class="skill-sigla" aria-hidden="true">Py</span>
+            <span class="skill-nombre" id="nombre-python">Python</span>
+            <span class="skill-detalle" id="detalle-python">Lenguaje para programas, scripts y servicios.</span>
+          </button>
+        </li>
+        <li data-revelar>
+          <button type="button" class="skill" aria-labelledby="nombre-scrum" aria-describedby="detalle-scrum">
+            <span class="skill-sigla" aria-hidden="true">Sc</span>
+            <span class="skill-nombre" id="nombre-scrum">Scrum</span>
+            <span class="skill-detalle" id="detalle-scrum">Marco para organizar el trabajo en iteraciones.</span>
+          </button>
+        </li>
+        <li data-revelar>
+          <button type="button" class="skill" aria-labelledby="nombre-git" aria-describedby="detalle-git">
+            <span class="skill-sigla" aria-hidden="true">Git</span>
+            <span class="skill-nombre" id="nombre-git">Git</span>
+            <span class="skill-detalle" id="detalle-git">Control de versiones del código y su historial.</span>
+          </button>
+        </li>
+        <li data-revelar>
+          <button type="button" class="skill" aria-labelledby="nombre-github" aria-describedby="detalle-github">
+            <span class="skill-sigla" aria-hidden="true">GH</span>
+            <span class="skill-nombre" id="nombre-github">GitHub</span>
+            <span class="skill-detalle" id="detalle-github">Alojamiento de repositorios y colaboración.</span>
+          </button>
+        </li>
+        <li data-revelar>
+          <button type="button" class="skill" aria-labelledby="nombre-javascript" aria-describedby="detalle-javascript">
+            <span class="skill-sigla" aria-hidden="true">JS</span>
+            <span class="skill-nombre" id="nombre-javascript">JavaScript</span>
+            <span class="skill-detalle" id="detalle-javascript">Interacción y lógica en la web.</span>
+          </button>
+        </li>
+        <li data-revelar>
+          <button type="button" class="skill" aria-labelledby="nombre-mysql" aria-describedby="detalle-mysql">
+            <span class="skill-sigla" aria-hidden="true">SQL</span>
+            <span class="skill-nombre" id="nombre-mysql">MySQL</span>
+            <span class="skill-detalle" id="detalle-mysql">Base de datos relacional y consultas.</span>
+          </button>
+        </li>
+        <li data-revelar>
+          <button type="button" class="skill" aria-labelledby="nombre-java" aria-describedby="detalle-java">
+            <span class="skill-sigla" aria-hidden="true">Java</span>
+            <span class="skill-nombre" id="nombre-java">Java</span>
+            <span class="skill-detalle" id="detalle-java">Lenguaje para aplicaciones y servicios.</span>
+          </button>
+        </li>
+        <li data-revelar>
+          <button type="button" class="skill" aria-labelledby="nombre-n8n" aria-describedby="detalle-n8n">
+            <span class="skill-sigla" aria-hidden="true">n8n</span>
+            <span class="skill-nombre" id="nombre-n8n">n8n</span>
+            <span class="skill-detalle" id="detalle-n8n">Automatización de flujos entre herramientas.</span>
+          </button>
+        </li>
+        <li data-revelar>
+          <button type="button" class="skill" aria-labelledby="nombre-html" aria-describedby="detalle-html">
+            <span class="skill-sigla" aria-hidden="true">HTML</span>
+            <span class="skill-nombre" id="nombre-html">HTML</span>
+            <span class="skill-detalle" id="detalle-html">Estructura semántica de la página.</span>
+          </button>
+        </li>
+        <li data-revelar>
+          <button type="button" class="skill" aria-labelledby="nombre-css" aria-describedby="detalle-css">
+            <span class="skill-sigla" aria-hidden="true">CSS</span>
+            <span class="skill-nombre" id="nombre-css">CSS</span>
+            <span class="skill-detalle" id="detalle-css">Presentación visual y diseño adaptable.</span>
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contacto" class="seccion" aria-labelledby="titulo-contacto" data-grupo-revelar>
+      <p class="seccion-indice" data-revelar>05</p>
+      <h2 id="titulo-contacto" data-revelar>Contacto</h2>
+      <ul class="vias">
+        <li data-revelar>
+          <a href="https://github.com/jhonrue28" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+            </svg>
+          </a>
+        </li>
+        <li data-revelar>
+          <a href="https://www.linkedin.com/in/jhonatan-david-rueda-galeano-755a20210/" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.5h4.56V24H.22V8.5zM8.34 8.5h4.37v2.12h.06c.61-1.15 2.1-2.37 4.32-2.37 4.62 0 5.48 3.04 5.48 7v8.75h-4.56v-7.75c0-1.85-.03-4.22-2.57-4.22-2.58 0-2.97 2.01-2.97 4.09V24H8.34V8.5z"/>
+            </svg>
+          </a>
+        </li>
+        <li data-revelar>
+          <a href="mailto:jhonrue28@gmail.com" aria-label="Correo electrónico">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M3 5.25A2.25 2.25 0 0 1 5.25 3h13.5A2.25 2.25 0 0 1 21 5.25v.38l-8.4 5.88a1.1 1.1 0 0 1-1.2 0L3 5.63v-.38Zm0 2.55 8.15 5.7a2.6 2.6 0 0 0 2.7 0L21 7.8v10.95A2.25 2.25 0 0 1 18.75 21H5.25A2.25 2.25 0 0 1 3 18.75V7.8Z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="sitio-pie">
+    <p>Jhonatan Rueda</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

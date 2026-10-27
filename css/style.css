@@ -1,0 +1,538 @@
+:root {
+  --fondo: #080b12;
+  --superficie: #151d2b;
+  --texto: #f1f5f9;
+  --texto-suave: #a8b3c7;
+  --acento: #63d8ff;
+  --linea: #273449;
+  --fuente-display: "Segoe UI", system-ui, sans-serif;
+  --fuente-texto: "Segoe UI", system-ui, sans-serif;
+  --fuente-mono: ui-monospace, "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+  --medida: 70rem;
+  --cabecera: 4.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--cabecera);
+  color-scheme: dark;
+  background: var(--fondo);
+}
+
+body {
+  margin: 0;
+  overflow-x: clip;
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--texto);
+  background: var(--fondo);
+}
+
+::selection {
+  background: var(--acento);
+  color: var(--fondo);
+}
+
+.saltar {
+  position: absolute;
+  left: 1rem;
+  top: 0.75rem;
+  z-index: 3;
+  padding: 0.4rem 0.7rem;
+  transform: translateY(-150%);
+  background: var(--acento);
+  color: var(--fondo);
+  text-decoration: none;
+}
+
+.saltar:focus {
+  transform: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--acento);
+  outline-offset: 3px;
+}
+
+a {
+  color: inherit;
+}
+
+.sitio-cabecera,
+.seccion,
+.sitio-pie {
+  width: min(calc(100% - 2.5rem), var(--medida));
+  margin-inline: auto;
+}
+
+.sitio-cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  min-height: var(--cabecera);
+  padding-block: 0.85rem;
+  background: var(--fondo);
+  border-bottom: 1px solid var(--linea);
+}
+
+.marca {
+  color: var(--texto);
+  font-family: var(--fuente-display);
+  letter-spacing: 0.01em;
+  text-decoration: none;
+}
+
+.sitio-cabecera nav ul,
+.skills-rejilla,
+.vias {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sitio-cabecera nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.15rem;
+}
+
+.sitio-cabecera nav a {
+  color: var(--texto-suave);
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.sitio-cabecera nav a:hover,
+.sitio-cabecera nav a:focus-visible {
+  color: var(--acento);
+}
+
+.seccion {
+  padding-block: clamp(3.5rem, 8vw, 6rem) 0;
+  scroll-margin-top: var(--cabecera);
+}
+
+.seccion-indice {
+  margin: 0 0 0.75rem;
+  color: var(--acento);
+  font-family: var(--fuente-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+.marca,
+.proyecto h3 {
+  font-family: var(--fuente-display);
+  font-weight: 500;
+}
+
+.skill-sigla {
+  font-family: var(--fuente-mono);
+  font-weight: 500;
+}
+
+h1 {
+  max-width: 12em;
+  font-size: clamp(2.15rem, 4.6vw, 3.75rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.presentacion {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(12rem, 0.7fr);
+  align-items: end;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding-top: clamp(2.5rem, 7vw, 5rem);
+}
+
+.presentacion-rol {
+  max-width: 22rem;
+  margin-top: 1.25rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--acento);
+  color: var(--texto-suave);
+  font-size: 1.05rem;
+}
+
+.retrato {
+  position: relative;
+  justify-self: end;
+  width: min(100%, 16rem);
+  margin: 0;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid var(--linea);
+  background: var(--superficie);
+}
+
+.retrato::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  border-top: 1px solid var(--acento);
+  border-left: 1px solid var(--acento);
+  pointer-events: none;
+}
+
+.retrato img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+.narrativa {
+  max-width: 40rem;
+  padding-left: 1.25rem;
+  border-left: 1px solid var(--acento);
+}
+
+.narrativa p {
+  color: var(--texto);
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+  line-height: 1.5;
+}
+
+.composicion {
+  border-top: 1px solid var(--linea);
+}
+
+.proyecto {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  min-width: 0;
+  padding-block: 2.25rem;
+  border-bottom: 1px solid var(--linea);
+}
+
+.proyecto:nth-child(even) .proyecto-figura {
+  order: 2;
+}
+
+.proyecto-figura {
+  margin: 0;
+  min-width: 0;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid var(--linea);
+  border-radius: 0.75rem;
+  background: var(--superficie);
+}
+
+.proyecto-figura img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.proyecto-pendiente {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(var(--acento), var(--acento)) 1.1rem 1.1rem / 1.75rem 1px no-repeat,
+    linear-gradient(var(--acento), var(--acento)) 1.1rem 1.1rem / 1px 1.75rem no-repeat;
+}
+
+.proyecto-pendiente p {
+  margin: 0;
+  color: var(--texto-suave);
+  font-family: var(--fuente-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.proyecto-cuerpo {
+  display: grid;
+  gap: 0.85rem;
+  min-width: 0;
+}
+
+.proyecto h3 {
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  line-height: 1.15;
+}
+
+.proyecto h4 {
+  color: var(--acento);
+  font-family: var(--fuente-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.proyecto-cuerpo p {
+  color: var(--texto-suave);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.proyecto h4 + p {
+  font-size: 0.95rem;
+}
+
+.proyecto-enlace {
+  justify-self: start;
+  color: var(--acento);
+  font-family: var(--fuente-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.proyecto-enlace:hover,
+.proyecto-enlace:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.28rem;
+}
+
+.skills-rejilla {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.skills-rejilla li {
+  min-width: 0;
+}
+
+.skill {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+  padding: 0.85rem;
+  border: 1px solid var(--linea);
+  border-radius: 0.75rem;
+  background: transparent;
+  color: var(--texto);
+  font: inherit;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.skill-sigla {
+  color: var(--texto-suave);
+  font-size: clamp(1.35rem, 2.2vw, 1.9rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  transition: opacity 0.35s ease, transform 0.35s ease, color 0.25s ease;
+}
+
+.skill-nombre {
+  position: absolute;
+  right: 0.7rem;
+  bottom: 0.7rem;
+  left: 0.7rem;
+  z-index: 1;
+  font-size: 0.92rem;
+}
+
+.skill-detalle {
+  position: absolute;
+  inset: 0.85rem 0.75rem 2.15rem;
+  display: grid;
+  place-items: center;
+  color: var(--texto);
+  font-size: 0.9rem;
+  line-height: 1.35;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(0.45rem);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.skill:hover,
+.skill:focus-visible,
+.skill.is-abierta {
+  background: var(--superficie);
+  border-color: rgb(99 216 255 / 0.45);
+}
+
+.skill:focus-visible .skill-detalle,
+.skill.is-abierta .skill-detalle {
+  opacity: 1;
+  transform: none;
+}
+
+.skill:focus-visible .skill-sigla,
+.skill.is-abierta .skill-sigla {
+  opacity: 0;
+  transform: translateY(-0.35rem);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .skill:hover .skill-detalle {
+    opacity: 1;
+    transform: none;
+  }
+
+  .skill:hover .skill-sigla {
+    color: var(--acento);
+    opacity: 0;
+    transform: translateY(-0.35rem);
+  }
+}
+
+.vias {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid var(--linea);
+  padding-top: 1.5rem;
+}
+
+.vias li {
+  min-width: 0;
+}
+
+.vias a {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  color: var(--texto);
+  border: 1px solid var(--linea);
+  border-radius: 0.75rem;
+  background: transparent;
+  text-decoration: none;
+  transition: color 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.vias a svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.vias a:hover,
+.vias a:focus-visible {
+  color: var(--acento);
+  border-color: rgb(99 216 255 / 0.45);
+  background: var(--superficie);
+}
+
+.sitio-pie {
+  padding-block: 2.5rem 3rem;
+}
+
+.sitio-pie p {
+  color: var(--texto-suave);
+  font-family: var(--fuente-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .revelar {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  .revelar.is-visible,
+  .revelar:focus-within {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.65s ease, transform 0.65s ease;
+    transition-delay: var(--retraso, 0ms);
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .sitio-cabecera nav a,
+  .proyecto h3,
+  .skill,
+  .skill-sigla,
+  .skill-detalle,
+  .vias a {
+    transition: none;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --cabecera: 8rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .presentacion {
+    grid-template-columns: 1fr;
+  }
+
+  .retrato {
+    justify-self: start;
+  }
+
+  .proyecto {
+    grid-template-columns: 1fr;
+    padding-block: 1.75rem;
+  }
+
+  .proyecto:nth-child(even) .proyecto-figura {
+    order: 0;
+  }
+
+  .skills-rejilla {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .sitio-cabecera,
+  .seccion,
+  .sitio-pie {
+    width: min(calc(100% - 1.5rem), var(--medida));
+  }
+}
